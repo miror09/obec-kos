@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b65">
+  <meta name="description" content="Komunálne voľby v obci Koš – výsledky volieb starostu a obecného zastupiteľstva.">
+  <title>Komunálne voľby 2026 | Obec Koš</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="pdf.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Obec Koš – domov">
+        <img class="crest" src="assets/erb-kos.png" alt="Erb obce Koš" width="64" height="62">
+        <span>Obec Koš</span>
+      </a>
+      <button class="menu-button" id="menu-button" type="button" aria-label="Otvoriť navigáciu" aria-controls="navigation" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="navigation" id="navigation" aria-label="Hlavná navigácia">
+        <a class="current" aria-current="page" href="index.html">Domov</a>
+        <a href="vysledky.html">Výsledky</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Výsledky komunálnych volieb v obci Koš</h1>
+        <p>Prehľad výsledkov volieb 24. októbra 2026</p>
+        <button class="download-button" id="pdf-download" type="button" aria-label="Stiahnuť aktuálne PDF výsledkov volieb">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="25" height="25" fill="currentColor"><path d="M11 2h2v12.17l3.59-3.58L18 12l-6 6-6-6 1.41-1.41L11 14.17V2ZM4 19h16v3H4v-3Z"/></svg>
+          <span>Stiahnuť PDF výsledkov</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="turnout-band" aria-labelledby="turnout-heading">
+      <div class="container turnout-inner">
+        <h2 id="turnout-heading" class="heading">Účasť voličov</h2>
+        <div class="turnout-value"><strong id="turnout-value">—</strong><span>z oprávnených voličov</span></div>
+      </div>
+    </section>
+
+    <div class="container sections">
+      <section class="election-section" aria-labelledby="mayor-heading">
+        <h2 id="mayor-heading" class="heading">Voľba starostu</h2>
+        <div class="table-wrap">
+          <table class="data-table mayor-table">
+            <thead><tr><th scope="col">#</th><th scope="col">Kandidát</th><th scope="col">Počet hlasov</th><th scope="col">Podiel hlasov</th><th scope="col">Výsledok</th></tr></thead>
+            <tbody id="mayor-body"><tr><td colspan="5">Načítavam údaje…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="election-section" aria-labelledby="council-heading">
+        <h2 id="council-heading" class="heading">Výsledky volieb do obecného zastupiteľstva</h2>
+        <div class="table-wrap">
+          <table class="data-table council-table">
+            <thead><tr><th scope="col">#</th><th scope="col">Kandidát</th><th scope="col">Počet hlasov</th><th scope="col">Výsledok</th></tr></thead>
+            <tbody id="council-body"><tr><td colspan="4">Načítavam údaje…</td></tr></tbody>
+          </table>
+        </div>
+        <button class="more-button" id="show-more" type="button" aria-expanded="false" aria-controls="council-body" hidden>
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          <span>Zobraziť viac</span>
+        </button>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span id="view-counter" aria-label="Počet otvorení v tomto prehliadači"></span></div></footer>
+</body>
+</html>
