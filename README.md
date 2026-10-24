@@ -1,0 +1,1 @@
+# obec-kos
