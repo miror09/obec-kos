@@ -155,14 +155,34 @@ try {
   });
 }
 
-// Toto počítadlo je iba lokálne. Zobrazuje otvorenia v danom prehliadači,
-// nie celkový počet návštevníkov webu (ten vyžaduje serverovú službu).
-try {
-  const key = 'obec-kos-local-views';
-  const old = Number(localStorage.getItem(key));
-  const views = Number.isSafeInteger(old) && old >= 0 ? old + 1 : 1;
-  localStorage.setItem(key, String(views));
-  $('view-counter').textContent = num.format(views);
-} catch (error) {
-  $('view-counter').textContent = '';
+// Spoločné online počítadlo pre obe stránky (bez PHP a MySQL).
+// Rovnaký názov počítadla používa index.html aj vysledky.html.
+// Pri lokálnom otvorení iba čítame stav; nepripočítame skúšobné návštevy.
+async function loadSharedViewCounter() {
+  const counter = $('view-counter');
+  if (!counter) return;
+
+  // Ak zmeníte adresu webu, názov počítadla ponechajte rovnaký.
+  const namespace = 'obec-kos-komunalne-volby-2026';
+  const action = 'view';
+  const key = 'stranka';
+  const isLocal = location.protocol === 'file:' ||
+    ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+  const url = `https://counterapi.com/api/${namespace}/${action}/${key}` +
+    (isLocal ? '?readOnly=true' : '');
+
+  try {
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Počítadlo: HTTP ${response.status}`);
+    const result = await response.json();
+    if (!Number.isSafeInteger(result.value) || result.value < 0) {
+      throw new Error('Neplatná odpoveď počítadla');
+    }
+    counter.textContent = num.format(result.value);
+  } catch (error) {
+    // Ak online služba nie je dostupná, nevypisujeme nepravdivý lokálny počet.
+    counter.textContent = '—';
+    console.warn('Počítadlo návštev nie je dostupné:', error);
+  }
 }
+loadSharedViewCounter();
