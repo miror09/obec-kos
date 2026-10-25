@@ -2,7 +2,7 @@ window.VOLBY_DATA = {
   "councilSeats": 9,
   "turnout": {
     "eligible": 875,
-    "voted": 589,
+    "voted": 575,
     "mayorValidBallots": null
   },
   "mayor": [
