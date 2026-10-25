@@ -10,21 +10,21 @@ window.VOLBY_DATA = {
       "number": 1,
       "name": "Dušan Lazar, Ing.",
       "photo": "assets/lazar.jpg",
-      "votes": null,
+      "votes": 199,
       "elected": null
     },
     {
       "number": 2,
       "name": "Lukáš Leitman, Ing.",
       "photo": "assets/leitman.jpg",
-      "votes": null,
+      "votes": 269,
       "elected": null
     },
     {
       "number": 3,
       "name": "Rastislav Píš",
       "photo": "assets/pis.jpg",
-      "votes": null,
+      "votes": 107,
       "elected": null
     }
   ],
