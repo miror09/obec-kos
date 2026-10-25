@@ -32,103 +32,103 @@ window.VOLBY_DATA = {
     {
       "number": 1,
       "name": "Ján Andel",
-      "votes": null,
+      "votes": 107,
       "elected": null
     },
     {
       "number": 2,
       "name": "Michal Bitara",
-      "votes": null,
+      "votes": 308,
       "elected": null
     },
     {
       "number": 3,
       "name": "Miroslav Budinský",
-      "votes": null,
+      "votes": 210,
       "elected": null
     },
     {
       "number": 4,
       "name": "René Daumer",
-      "votes": null,
+      "votes": 166,
       "elected": null
     },
     {
       "number": 5,
       "name": "Zuzana Kurbelová, Ing.",
-      "votes": null,
+      "votes": 352,
       "elected": null
     },
     {
       "number": 6,
       "name": "Adam Leitman",
-      "votes": null,
+      "votes": 357,
       "elected": null
     },
     {
       "number": 7,
       "name": "Lukáš Leitman, Ing.",
-      "votes": null,
+      "votes": 367,
       "elected": null
     },
     {
       "number": 8,
       "name": "Beáta Michníková",
-      "votes": null,
+      "votes": 320,
       "elected": null
     },
     {
       "number": 9,
       "name": "Marek Minich",
-      "votes": null,
+      "votes": 227,
       "elected": null
     },
     {
       "number": 10,
       "name": "Dávid Páleš",
-      "votes": null,
+      "votes": 72,
       "elected": null
     },
     {
       "number": 11,
       "name": "Ján Perniš",
-      "votes": null,
+      "votes": 231,
       "elected": null
     },
     {
       "number": 12,
       "name": "Matúš Píš",
-      "votes": null,
+      "votes": 182,
       "elected": null
     },
     {
       "number": 13,
       "name": "Rastislav Píš",
-      "votes": null,
+      "votes": 209,
       "elected": null
     },
     {
       "number": 14,
       "name": "Miroslav Pős",
-      "votes": null,
+      "votes": 115,
       "elected": null
     },
     {
       "number": 15,
       "name": "Miroslav Richter, Ing.",
-      "votes": null,
+      "votes": 151,
       "elected": null
     },
     {
       "number": 16,
       "name": "Marta Štorcelová",
-      "votes": null,
+      "votes": 168,
       "elected": null
     },
     {
       "number": 17,
       "name": "Peter Toman",
-      "votes": null,
+      "votes": 64,
       "elected": null
     }
   ]
